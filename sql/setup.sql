@@ -6,7 +6,7 @@ DROP TABLE IF EXISTS books;
 CREATE TABLE authors (
   id BIGINT GENERATED ALWAYS AS IDENTITY,
   name VARCHAR NOT NULL,
-  dob DATE,
+  dob VARCHAR,
   pob VARCHAR
 );
 
@@ -20,7 +20,7 @@ INSERT INTO authors (name, dob, pob)
 VALUES 
 ('J. R. R. Tolkein', '1892-01-03', 'Bloemfontein, Orange Free State'),
 ('J. D. Salinger', '1919-01-01', 'Cornish, New Hampshire, U.S'),
-('C. S. Lewis', '1898-11-29 ', 'Belfast, Ireland'),
+('C. S. Lewis', '1898-11-29', 'Belfast, Ireland'),
 ('Paulo Coelho', '1947-08-24 ', 'Rio de Janeiro, Brazil');
 
 INSERT INTO books (title, released)
